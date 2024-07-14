@@ -79,7 +79,7 @@ function getWinner(player,  bot) {
 function runGameEndless() {
     computer = getComputerChoice();
     player = getUserChoice();
-    console.log(getWinner);
+    alert(getWinner);
     runGameEndless();
 }
 
