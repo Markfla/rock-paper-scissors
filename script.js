@@ -1,5 +1,5 @@
-let playerScore, botScore = 0;
-
+let playerScore= 0;
+let botScore =0;
 function getComputerChoice() {
     let i = Math.random();
     switch (i) {
