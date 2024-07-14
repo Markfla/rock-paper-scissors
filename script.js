@@ -27,9 +27,7 @@ function getUserChoice() {
         case "paper":
             return "paper";
             break;  
-        default:
-            console.log("invalid input, please retry");
-            getUserChoice();
+
     }
 }
 
