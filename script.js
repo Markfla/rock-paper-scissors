@@ -1,3 +1,5 @@
+let playerScore, botScore = 0;
+
 function getComputerChoice() {
     let i = Math.random();
     switch (i) {
@@ -39,9 +41,11 @@ function getWinner(player,  bot) {
                 break;
             case paper:
                 return "Win";
+                playerScore +=1;
                 break;
             case scissors:
                 return "Loss";
+                botScore +=1;
                 break;
         }
     }
@@ -49,12 +53,14 @@ function getWinner(player,  bot) {
         switch (player) {
             case rock:
                 return "Loss";
+                botScore+=1;
                 break;
             case paper:
                 return "Draw";
                 break;
             case scissors:
                 return "Win";
+                playerScore +=1;
                 break;
         }
     }
@@ -62,9 +68,11 @@ function getWinner(player,  bot) {
         switch (player) {
             case rock:
                 return "Loss";
+                botScore +=1;
                 break;
             case paper:
                 return "Win";
+                playerScore +=1;
                 break;
             case scissors:
                 return "Draw";
@@ -74,11 +82,20 @@ function getWinner(player,  bot) {
 
 }
 
-function runGameEndless() {
+function runGame() {
     computer = getComputerChoice();
     player = getUserChoice();
-    console.log(getWinner);
-    //runGameEndless();
+    let result = getWinner();
+    console.log(result);
+
 }
 
-runGameEndless();
+for(i=0; i < 5; i++) {
+    runGame();
+}
+if (playerScore > botScore) {
+    console.log("Congratulation's you won with a score of " + toString(playerScore) + "-" +toString(botScore))
+}
+else {
+    console.log("Unfortunately you lost with a score of " + toString(playerScore) + "-" +toString(botScore))
+}
