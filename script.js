@@ -36,14 +36,14 @@ function getUserChoice() {
 function getWinner(player,  bot) {
     if (bot === "rock") {
         switch (player) {
-            case rock:
+            case "rock":
                 return "Draw";
                 break;
-            case paper:
+            case "paper":
                 return "Win";
                 playerScore +=1;
                 break;
-            case scissors:
+            case "scissors":
                 return "Loss";
                 botScore +=1;
                 break;
@@ -51,14 +51,14 @@ function getWinner(player,  bot) {
     }
     if (bot === "paper") {
         switch (player) {
-            case rock:
+            case "rock":
                 return "Loss";
                 botScore+=1;
                 break;
-            case paper:
+            case "paper":
                 return "Draw";
                 break;
-            case scissors:
+            case "scissors":
                 return "Win";
                 playerScore +=1;
                 break;
@@ -66,15 +66,15 @@ function getWinner(player,  bot) {
     }
     if (bot === "scissors") {
         switch (player) {
-            case rock:
+            case "rock":
                 return "Loss";
                 botScore +=1;
                 break;
-            case paper:
+            case "paper":
                 return "Win";
                 playerScore +=1;
                 break;
-            case scissors:
+            case "scissors":
                 return "Draw";
                 break;
         }
