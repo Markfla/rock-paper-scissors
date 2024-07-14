@@ -80,7 +80,7 @@ function runGameEndless() {
     computer = getComputerChoice();
     player = getUserChoice();
     console.log(getWinner);
-    runGameEndless();
+    //runGameEndless();
 }
 
 runGameEndless();
