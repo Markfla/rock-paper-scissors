@@ -85,7 +85,7 @@ function getWinner(player,  bot) {
 function runGame() {
     computer = getComputerChoice();
     player = getUserChoice();
-    let result = getWinner();
+    let result = getWinner(player,computer);
     console.log(result);
 
 }
